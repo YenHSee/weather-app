@@ -42,7 +42,7 @@ function App() {
       country: data.country,
       timeNow: data.timeNow,
     };
-    setHistoryList((prevData) => [...prevData, historyData]);
+    setHistoryList((prevData) => [historyData, ...prevData]);
   };
 
   return (

@@ -6,7 +6,13 @@ const InputSearch = ({ query, setQuery }) => {
   const [location, setLocation] = useState("");
 
   const handleSubmit = () => {
-    if (location !== "") setQuery(location);
+    if (location !== "") setQuery(location.toLowerCase());
+  };
+
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      if (location !== "") setQuery(location.toLowerCase());
+    }
   };
 
   useEffect(() => {
@@ -22,6 +28,7 @@ const InputSearch = ({ query, setQuery }) => {
         placeholder="Please Enter Country / City Name"
         onChange={(e) => setLocation(e.currentTarget.value)}
         className="search_input"
+        onKeyPress={handleKeyPress}
       />
       <button className="search_button" onClick={handleSubmit}>
         <CiSearch style={{ fontSize: "2rem" }} />

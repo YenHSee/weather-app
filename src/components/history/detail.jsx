@@ -8,7 +8,7 @@ const HistoryDetail = ({ history, setHistoryList, setQuery }) => {
   };
 
   const searchHistory = (name) => {
-    setQuery(name);
+    setQuery(name.toLowerCase());
   };
 
   return (
