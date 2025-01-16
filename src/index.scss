@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  height: 100%;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+.light {
+  --background-image: url("./assets/bg-light.png");
+  --temperature-color: #6f3fb5;
+  --text-primary-color: #140a18;
+  --text-secondary-color: #686767;
+  --search-btn-color: #6b41b4;
+  --search-btn-hover-color: #845ed0;
+  --input-field-color: #bba6e7;
+  --input-field-placeholder-color: #8875ac;
+  --extra-info-color: var(--text-secondary-color);
+  --time-color: var(--text-primary-color);
+  --history-container-color: var(--input-field-color);
+  --history-detail-container-color: #e1d6f6;
+  --history-action-icon-container-color: #fefefb;
+  --history-action-icon-container-hover-color: #eee;
+  --history-action-icon-container-border-color: #e1d6f6;
+  --history-action-icon-color: #808080;
+}
+
+.dark {
+  --background-image: url("./assets/bg-dark.png");
+  --temperature-color: #fdfdfe;
+  --bg-color: var(--text-primary-color);
+  --text-primary-color: #fdfdfe;
+  --input-field-placeholder-color: #bba6e7;
+  --text-secondary-color: #807792;
+  --search-btn-color: #27124b;
+  --search-btn-hover-color: #3a1d70;
+  --input-field-color: #3a2e78;
+  --extra-info-color: var(--text-primary-color);
+  --time-color: var(--text-secondary-color);
+  --history-container-color: #3a2c6a;
+  --history-detail-container-color: #2a2241;
+  --history-action-icon-container-color: #272240;
+  --history-action-icon-container-hover-color: #808080;
+  --history-action-icon-container-border-color: var(
+    --history-action-icon-color
+  );
+  --history-action-icon-color: #93909e;
+}
+
+body {
+  background-color: var(--light-background-image);
+  height: 100%;
+  margin: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: var(--background-image);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--text-primary-color);
+  }
+  a:hover {
+    color: #747bff;
+  }
+
+  .search_input {
+    background-color: var(--input-field-color);
+  }
+
+  .search_input::placeholder {
+    color: var(--input-field-placeholder-color);
+  }
+
+  .search_button {
+    background-color: var(--search-btn-color);
+  }
+
+  .search_button:hover {
+    background-color: var(--search-btn-hover-color);
+  }
+
+  .extra_info {
+    color: var(--extra-info-color);
+  }
+
+  .temperature {
+    color: var(--temperature-color);
+  }
+
+  .history_container {
+    background-color: var(--history-container-color);
+  }
+
+  .detail_card {
+    background-color: var(--history-detail-container-color);
+  }
+
+  .detail_card_info_time {
+    color: var(--time-color);
+  }
+
+  .detail_card_action_button:hover {
+    background-color: var(--history-action-icon-container-hover-color);
+  }
+
+  .detail_card_action_button {
+    border: 1px solid var(--history-action-icon-container-border-color);
+    background-color: var(--history-action-icon-container-color);
+  }
+
+  .detail_card_action_button svg {
+    color: var(--history-action-icon-color);
+  }
+}

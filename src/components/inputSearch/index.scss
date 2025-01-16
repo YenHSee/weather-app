@@ -1,0 +1,36 @@
+.top_section {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+
+  > .country {
+    color: #8875ac;
+    font-size: 12px;
+    position: absolute;
+    top: -0px;
+    left: 1rem;
+  }
+
+  > .search_input {
+    width: 88%;
+    border: none;
+    outline: none;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+  }
+
+  > .search_button {
+    width: 56px;
+    height: 56px;
+    border-radius: 1rem;
+    cursor: pointer;
+    justify-items: center;
+
+    > svg {
+      color: white;
+    }
+  }
+}
